@@ -1,16 +1,14 @@
-let username
+let username;
 
-document.getElementById("mySubmit").onclick = function() {
-
-    username = document.getElementById("myText").value;
-    if (username.length > 0) {
-        document.getElementById("myText").value = "";
-        window.alert("Hello " + username);
-        
+username = window.prompt("Enter your username: ");
+if (username) {
+    window.alert("Hello " + username);
+    console.log("Hello " + username);
     }
-    console.log(username);
-    document.getElementById("myText").textContent = ""; // clear the username field after submission
-}
+else {
+    window.alert("No username entered");
+    }
+
 
 
 
