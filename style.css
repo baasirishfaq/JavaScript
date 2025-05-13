@@ -1,5 +1,28 @@
-body{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+body {
+    font-family: cursive;
     font-size: 2em;
-    
-}
+    background-color: rgb(6, 5, 5);
+    justify-content: center;
+    align-items: center;
+    display: flex; /* Add this */
+    height: 100vh; /* Full viewport height */
+    margin: 0; /* Remove default margin */
+    color: rgb(214, 210, 210);
+    text-align: center;
+  }
+  
+  #op {
+    display: inline-block;
+    background-color: rgb(65, 103, 15);
+    padding: 5px;
+    border-radius: 50px;
+  }
+  
+  #bodyofcal {
+    background-color: #333;
+    padding: 20px;
+    border-radius: 15px;
+    width: 300px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
