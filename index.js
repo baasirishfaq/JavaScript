@@ -1,16 +1,10 @@
 // Initialize an empty string to store the current expression (like "2+3*4")
 let expression = ""; 
 
-// Function to update the input field with the current expression
-function updateInput(value) {
-    // Append the new value (number/operator) to the expression
-    expression += value;
-    // Display the updated expression in the input box
-    document.getElementById("myText").value = expression;
-}
+
 
 // List of button IDs for numbers and operators
-const buttons = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "plus", "minus", "multiply", "divide"];
+const buttons = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0", "plus", "minus", "multiply", "divide", "%"];
 
 // Loop through each button ID and assign a click event
 buttons.forEach((id) => {
@@ -22,6 +16,7 @@ buttons.forEach((id) => {
         if (id === "plus") value = "+";       // "+" button
         else if (id === "minus") value = "-"; // "-" button
         else if (id === "multiply") value = "*"; // "*" button
+        else if (id === "%") value = "%"; // "%" button
         else if (id === "divide") value = "/"; // "/" button
         else value = id; // If not an operator, it must be a number (like "1", "2", etc.)
         
@@ -30,11 +25,19 @@ buttons.forEach((id) => {
     };
 });
 
+// Function to update the input field with the current expression
+function updateInput(value) {
+    // Append the new value (number/operator) to the expression
+    expression += value;
+    // Display the updated expression in the input box
+    document.getElementById("myText").value = expression;
+}
+
 // Clear button: Reset the expression and input field when clicked
 document.getElementById("clear").onclick = function () {
     expression = ""; // Reset the expression to an empty string
     document.getElementById("myText").value = ""; // Clear the input box
-    document.getElementById("output").textContent = ""; // Clear the output text
+    document.getElementById("rez").textContent = ""; // Clear the output text
 };
 
 // Submit button: Calculate and display the result when clicked
@@ -44,6 +47,8 @@ document.getElementById("submit").onclick = function () {
     
     // Display the calculated result in the output area
     document.getElementById("output").textContent = result;
+    document.getElementById("rez").textContent = "result: " + result;
+
     
     // Update the expression to the result so it can be used for further calculations
     expression = result.toString(); 
