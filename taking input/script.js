@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 // This is a simple JavaScript code that captures a username 
 // input from an HTML form and displays a welcome message on the page.
 
@@ -10,7 +10,7 @@ document.getElementById("mySubmit").onclick = function() {
     document.getElementById("myText").value = ""; // Clear the input field after taking the username
 
 }   
-=======
+
 const logIn = document.getElementById("logIn");
 const phone = document.getElementById("phone");
 const email = document.getElementById("email");
@@ -41,4 +41,3 @@ mysubmit.onclick = function(){
         result2.textContent = "You will not be contacted";
     }
 }
->>>>>>> 3c56c9b3dea84d692d2890a1ca2ab35a5aee0952
