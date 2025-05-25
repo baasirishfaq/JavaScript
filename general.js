@@ -1,37 +1,10 @@
-// number guessing game between 1 and 100
 
-let randomNumber = Math.floor(Math.random() * 100) + 1;
-let attempts = 0;
-let maxAttempts = 4;
-let gameOver = false;
+    let charset = 'abcdefghijklmnopqrstuvwxyz;', password = "";
+    let flag = 1;
 
-while(!gameOver){
-
-   let input = prompt("Guess a number between 1 and 100");
-    attempts++;
-    input = Number(input);
-    if (isNaN(input)) {
-        alert("Please enter a valid number.");
-        continue;
+    for (let i = 0; i < 5; i++) {
+        password += flag == 1 ? (charset.charAt(Math.floor(Math.random() * charset.length)) + Math.round(Math.random() * 9)) 
+            : charset.charAt(Math.floor(Math.random() * charset.length)).toUpperCase(); flag = 1 - flag;
     }
-    if (input < 1 || input > 100) {
-        alert("Please enter a number between 1 and 100.");
-        continue;
-    }
-    if (input === randomNumber) {
-        alert(`Congratulations! You guessed the number ${randomNumber} in ${attempts} attempts.`);
-        gameOver = true;
-    } else if (input < randomNumber) {
-        alert("Too low! Try again.");
-    } else {
-        alert("Too high! Try again.");
-    }
-    if (attempts >= maxAttempts) {
-        alert(`Game over! The number was ${randomNumber}.`);
-        gameOver = true;
-    }
-}
 
-
-
-
+    console.log(`password is ${password} and length is ${password.length}`); // Output: Testing
