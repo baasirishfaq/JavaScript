@@ -1,11 +1,8 @@
-let chs = ['a b c d e f g h i j k l m n o'];
+let nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let evens = nums.filter(isEven);
 
-
-let chs2 = chs.map(uppercase);
-
-
-function uppercase(str){
-    return str.toUpperCase();
+function isEven(nums){
+return nums % 2 === 0;
 }
 
-console.log(...chs2);
+console.log(...evens);
