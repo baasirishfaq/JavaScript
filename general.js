@@ -5,4 +5,4 @@ function isEven(nums){
 return nums % 2 === 0;
 }
 
-console.log(...evens);
+console.log(evens);
